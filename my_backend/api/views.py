@@ -3,14 +3,18 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import JsonResponse
 
-def endpoint1(request):
+def recipe1(request):
     data = {
-        "message": "Hello from Endpoint 1"
+        "name": "Spaghetti Bolognese",
+        "image_url": "https://example.com/spaghetti.jpg",
+        "instructions": "1. Cook the pasta. 2. Prepare the sauce. 3. Combine and serve."
     }
     return JsonResponse(data)
 
-def endpoint2(request):
+def recipe2(request):
     data = {
-        "message": "Hello from Endpoint 2"
+        "name": "Chicken Curry",
+        "image_url": "https://example.com/chicken-curry.jpg",
+        "instructions": "1. Cook the chicken. 2. Prepare the curry sauce. 3. Combine and serve."
     }
     return JsonResponse(data)
