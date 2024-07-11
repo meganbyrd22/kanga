@@ -1,5 +1,5 @@
 import LogoNav from "./LogoNav";
-import DataComponent from  './DataComponent';
+import RecipeList from './RecipeList';
 const Home = () => {
 
     return (
@@ -9,7 +9,7 @@ const Home = () => {
                 
                 <h1 className="text-6xl font-bold text-zinc-50 w-1/3">Summer recipes you have to try!</h1>
                 <div className="h-5/6 w-3/6 bg-gradient-to-l from-fuchsia-400 to-fuchsia-200 rounded">
-                <DataComponent />
+                <RecipeList />
                 </div>
             </div>
         </section>
