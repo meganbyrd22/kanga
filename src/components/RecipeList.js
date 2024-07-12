@@ -15,14 +15,13 @@ const RecipeList = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Recipes</h1>
-      <ul>
+    <div className='h-2/3 grid'>
+      <ul className='flex flex-col items-center gap-10 p-10'>
         {recipes.map((recipe, index) => (
-          <li key={index}>
-            <h2>{recipe.name}</h2>
-            <img src={recipe.image_url} alt={recipe.name} />
-            <p dangerouslySetInnerHTML={{ __html: recipe.instructions }}></p>
+          <li key={index} className='flex flex-col items-center shadow-2xl'>
+            <h2 className='text-2xl font-bold text-zinc-50'>{recipe.name}</h2>
+            <img src={recipe.image_url} alt={recipe.name} className='w-72 h-80 rounded' />
+            <p className='italic text-orange-500' dangerouslySetInnerHTML={{ __html: recipe.instructions }}></p>
           </li>
         ))}
       </ul>
