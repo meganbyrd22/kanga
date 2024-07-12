@@ -5,7 +5,7 @@ const RecipeList = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/recipes/')
+    axios.get('http://127.0.0.1:8000/api/recipes/')  
       .then(response => {
         setRecipes(response.data);
       })
@@ -22,7 +22,7 @@ const RecipeList = () => {
           <li key={index}>
             <h2>{recipe.name}</h2>
             <img src={recipe.image_url} alt={recipe.name} />
-            <p>{recipe.instructions}</p>
+            <p dangerouslySetInnerHTML={{ __html: recipe.instructions }}></p>
           </li>
         ))}
       </ul>
